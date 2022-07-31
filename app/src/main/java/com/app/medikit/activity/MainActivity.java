@@ -371,6 +371,7 @@ public class MainActivity extends AppCompatActivity implements SwipeRefreshLayou
             messageText.setGravity(Gravity.CENTER_HORIZONTAL);
             messageText.setTextColor(ContextCompat.getColor(MainActivity.this, R.color.colorSmokeWhite));
         }
+
     }
 
     /**
