@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/activity_Background"
+    tools:context=".activity.SplashActivity">
+
+   <androidx.appcompat.widget.LinearLayoutCompat
+       android:id="@+id/linearLayout"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_centerInParent="true"
+       android:gravity="center_horizontal"
+       android:orientation="vertical">
+
+       <!--App Logo-->
+       <androidx.appcompat.widget.AppCompatImageView
+           android:layout_width="@dimen/_150sdp"
+           android:layout_height="@dimen/_150sdp"
+           android:layout_marginBottom="@dimen/margin_Extra_Small"
+           android:adjustViewBounds="true"
+           app:srcCompat="@drawable/app_logo" />
+
+       <!--App Title-->
+       <androidx.appcompat.widget.AppCompatTextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="@dimen/margin_Extra_Small"
+           android:text="@string/app_name"
+           android:textColor="@color/text_Color_Accent"
+           android:textSize="@dimen/text_Size_Large"
+           android:textStyle="bold"/>
+
+   </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linearLayout"
+        android:layout_marginTop="@dimen/_100sdp"
+        android:gravity="center"
+        android:textSize="@dimen/_10sdp"
+        android:text="A SERVICE OF"
+        android:textColor="@color/text_Color_Accent" />
+    <ImageView
+        android:layout_below="@+id/textView"
+        android:id="@+id/imageViewMtl"
+        android:layout_width="@dimen/_100sdp"
+        android:layout_height="@dimen/_20sdp"
+        android:background="@drawable/mtl_logo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/_5sdp"/>
+    <!--Loading-->
+    <com.github.ybq.android.spinkit.SpinKitView
+        android:id="@+id/loader"
+        android:layout_above="@+id/networkCheckingTv"
+        style="@style/SpinKitView.Large.Circle"
+        android:layout_width="@dimen/icon_Size_Small"
+        android:layout_height="@dimen/icon_Size_Small"
+        android:layout_marginBottom="@dimen/margin_Small"
+        android:layout_centerHorizontal="true"
+        app:SpinKit_Color="@color/colorAccent" />
+
+    <!--Network Status-->
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/networkCheckingTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/_12sdp"
+        android:text="@string/network_Checking"
+        android:textColor="@color/text_Color_Accent"
+        android:textSize="@dimen/text_Size_Small"
+        android:visibility="invisible"/>
+
+</RelativeLayout>
