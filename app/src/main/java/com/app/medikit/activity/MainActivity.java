@@ -373,7 +373,6 @@ public class MainActivity extends AppCompatActivity implements SwipeRefreshLayou
         }
     }
 
-
     /**
      *  prompt permission dialog for autoStart
      **/
